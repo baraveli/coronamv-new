@@ -1,0 +1,241 @@
+@font-face {
+  font-family: "mvtyper";
+  src: url("/fonts/mvtyper.ttf");
+}
+
+@font-face {
+  font-family: "Mvaamu";
+  src: url("/fonts/mv-aammu-fk.ttf");
+}
+
+@font-face {
+  font-family: "Mvtyperbold";
+  src: url("/fonts/mvtypebold.ttf");
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #F4F4F4;
+}
+
+.bg-green {
+  background: #1BC98E;
+}
+
+.bg-orange {
+  background: #FF5D26;
+}
+
+.bg-yellow {
+  background: #FFB100;
+}
+
+.bg-red {
+  background: #E64759;
+}
+
+.bg-purple {
+  background: #9F86FF;
+}
+
+.bg-blue {
+  background: #5676F7;
+}
+
+
+.t-green {
+  color: #1BC98E;
+}
+
+.t-orange {
+  color: #FF5D26;
+}
+
+.t-yellow {
+  color: #FFB100;
+}
+
+.t-red {
+  color: #E64759;
+}
+
+.t-purple {
+  color: #9F86FF;
+}
+
+.t-blue {
+  color: #5676F7;
+}
+
+.t-flesh {
+  color: #355c97;
+}
+
+.t-black {
+  
+  color: #626278;
+}
+
+
+.c-bg-primary {
+  background: #232D42;
+}
+
+.divide:before {
+  background: rgba(0, 0, 0, 0.1);
+  content: '';
+  height: 1px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 8px;
+  width: 100%;
+  z-index: -1;
+}
+
+.card-settings {
+  font-family: Mvtyperbold;
+  font-weight:700;
+  text-align: center;
+  font-size: 5px;
+  margin-top: 6px;
+}
+
+.divtype {
+  font-family: Mvtyperbold;
+  text-align: center;
+  color: #3A3A56;
+}
+
+.divtype-normal {
+  font-family: mvtyper;
+  font-size: 14px;
+  font-weight:550;
+  text-align: center;
+  color: #3A3A56;
+  direction: rtl;
+}
+
+.icon-size {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-thub {
+  width: 30%;
+  height: 30%;
+}
+
+
+.link-div {
+  color: #212529;
+}
+
+.link-div:hover {
+  color: #5676F7;
+}
+
+
+
+.liveText {
+  font-size: 25px;
+  text-align: center;
+}
+
+
+
+@keyframes blinking {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+
+
+.card-color-red {
+  background-color: #E64759;
+}
+
+.card-color-yellow {
+  background-color: #FFAA00;
+}
+
+.card-color-green {
+  background-color: #1BC98E;
+}
+
+.card-color-white {
+  background-color: #FFFFFF;
+}
+
+.card-color-blue {
+  background-color: #5676F7;
+}
+
+.footer-a-tags {
+  color: #2F80FF;
+}
+
+.social-color {
+  color: #95A5A6;
+}
+
+
+.footer-text {
+  color: #60717B;
+}
+
+.mycontent-left {
+  border-right: 1px dashed #333;
+}
+
+.number-text
+{
+  font-weight: bold; 
+  font-size:17px; 
+  color:#2F80FF; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.divtype-normal-custom
+{
+  font-family:mvtyper; 
+  color: #3A3A56;
+  direction:rtl; 
+  font-size:14px;
+}
+
+.ban-name
+{
+  padding: 8px; 
+  background-color:#448DFF; 
+  color:white; 
+  font-size:13px;
+}
+
+.page-link
+{
+  background-color: #5676F7;
+}
+
+.page-link:hover
+{
+  background-color: #07259e;
+}
+
+.page-item.active .page-link
+{
+  background-color: #07259e;
+}
+
+.page-item.disabled .page-link {
+  background-color: #5676F7;
+}
+
+path:hover {
+  stroke: #FF093C
+}

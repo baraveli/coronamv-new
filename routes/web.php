@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/welcome', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('coronamv.index');
+});
+
+
+Route::get('/resources', function() {
+    return view('coronamv.resources.index');
+});

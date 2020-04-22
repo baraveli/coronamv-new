@@ -11,8 +11,8 @@
 
       <div id="navbarToggler" class="collapse navbar-collapse">
         <ul class="navbar-nav">
-          <locale-dropdown />
-          <!-- <li class="nav-item">
+          <!--<locale-dropdown />
+          <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
           </li> -->
         </ul>
@@ -27,9 +27,25 @@
               {{ user.name }}
             </a>
             <div class="dropdown-menu">
+
+               <router-link :to="{ name: 'stats.total' }" class="dropdown-item pl-3">
+                <fa icon="chart-bar" fixed-width />
+                {{ $t('stats') }}
+              </router-link>
+
+               <router-link :to="{ name: 'resources.resourcefilter' }" class="dropdown-item pl-3">
+                <fa icon="shopping-bag" fixed-width />
+                {{ $t('resources') }}
+              </router-link>
+
               <router-link :to="{ name: 'settings.profile' }" class="dropdown-item pl-3">
                 <fa icon="cog" fixed-width />
                 {{ $t('settings') }}
+              </router-link>
+
+               <router-link :to="{ name: 'users.index' }" class="dropdown-item pl-3">
+                <fa icon="user" fixed-width />
+                {{ $t('users') }}
               </router-link>
 
               <div class="dropdown-divider" />
@@ -46,11 +62,7 @@
                 {{ $t('login') }}
               </router-link>
             </li>
-            <li class="nav-item">
-              <router-link :to="{ name: 'register' }" class="nav-link" active-class="active">
-                {{ $t('register') }}
-              </router-link>
-            </li>
+          
           </template>
         </ul>
       </div>

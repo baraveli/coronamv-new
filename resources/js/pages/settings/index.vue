@@ -29,7 +29,7 @@ export default {
     tabs () {
       return [
         {
-          icon: 'user',
+          icon: 'user-circle',
           name: this.$t('profile'),
           route: 'settings.profile'
         },
@@ -37,6 +37,11 @@ export default {
           icon: 'lock',
           name: this.$t('password'),
           route: 'settings.password'
+        },
+        {
+          icon: 'user',
+          name: this.$t('newuser'),
+          route: 'settings.newusers'
         }
       ]
     }

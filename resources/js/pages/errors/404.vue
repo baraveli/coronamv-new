@@ -5,9 +5,7 @@
     </h3>
 
     <div class="links">
-      <router-link :to="{ name: 'welcome' }">
-        {{ $t('go_home') }}
-      </router-link>
+     <a href="/">Go Back</a>
     </div>
   </card>
 </template>
