@@ -54,7 +54,7 @@ class Resource extends Model
     public static $rules = [
         'title' => 'required',
         'body' => 'required',
-        'resource_link' => 'nullable',
+        'resource_link' => 'required',
         'resource_tag' => 'required'
     ];
 
