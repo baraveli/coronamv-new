@@ -39,7 +39,10 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::get('/users', 'Users\UsersController@index');
 
     Route::resource('totals', 'API\TotalAPIController');
-    Route::resource('resources', 'API\ResourceAPIController');
+    //Resources
+    Route::resource('resources', 'API\ResourceAPIController')->except('show');
+    Route::get('/resources/export', 'API\ResourceAPIController@export');
+
     Route::resource('resource_filters', 'API\ResourceFilterAPIController');
     Route::resource('tests', 'API\TestAPIController');
 

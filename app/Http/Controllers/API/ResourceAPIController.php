@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Exports\ResourceExport;
 use App\Http\Requests\API\CreateResourceAPIRequest;
 use App\Http\Requests\API\UpdateResourceAPIRequest;
 use App\Models\Resource;
@@ -10,6 +11,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
 use Response;
 use App\Models\ResourceFilter;
+use Maatwebsite\Excel\Facades\Excel;
 
 /**
  * Class ResourceController
@@ -152,5 +154,19 @@ class ResourceAPIController extends AppBaseController
         $resource->delete();
 
         return $this->sendSuccess('Resource deleted successfully');
+    }
+
+
+        
+    /**
+     * export
+     * 
+     *  Export the model to csv
+     *
+     * @return void
+     */
+    public function export()
+    {
+        return Excel::download(new ResourceExport, 'resources.csv');
     }
 }
