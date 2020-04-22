@@ -78,6 +78,8 @@
   "deaths": "Deaths",
   "active": "Active",
   "lat": "Latitude",
-  "long": "Longitude"
+  "long": "Longitude",
+  "body": "Body",
+  "resource_tag": "Resource Tag"
   
 }
