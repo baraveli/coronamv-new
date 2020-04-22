@@ -7,7 +7,7 @@
       </b-button>
     </div>
     <!-- Maldives pill end-->
-    <time class="f6 db gray text-center">LastUpdated:  @{{maldivestotal.created_at | dateDifforhumans}}</time>
+    <time class="f6 db gray text-center">LastUpdated:  @{{maldivestotal.created_at | utc().format("LLLL") }}</time>
 
     <!-- Maldives stats start-->
     <div class="flex flex-wrap nl3 nr3">
@@ -41,7 +41,7 @@
     <h4 class="divtype o-90 text-center" style="font-size: 17px;color: #3A3A56;">ޓެސްޓު ތަކުގެ ނަތީޖާ</h4>
     <p class="text-center" style="font-size: 11px;"><a href="https://twitter.com/HPA_MV"
         style="color: #2F80FF;">@HPA</a></p>
-    <time class="f6 db gray text-center">LastUpdated:  @{{tests.created_at | dateDifforhumans}}</time>
+    <time class="f6 db gray text-center">LastUpdated:  @{{tests.created_at | utc().format("LLLL")}}</time>
     <div class="flex flex-wrap nl3 nr3">
       <status-card class="card-settings" text="ޕޮސިޓިވް" colour="t-orange" :value="tests.total_positive">
       </status-card>

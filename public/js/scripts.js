@@ -421,9 +421,9 @@ new Vue({
 
   filters: {
 
-    dateDifforhumans: function (date) {
+    /* dateDifforhumans: function (date) {
       return moment(date).fromNow();
-    }
+    } */
 
 
   },
