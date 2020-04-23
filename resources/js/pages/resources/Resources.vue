@@ -272,7 +272,7 @@
       <p class="o-70">{{ entries }}</p>
     </div>
 
-    <export-csv ApiEndpoint="/api/resources/export" />
+    <export-csv ApiEndpoint="/api/resources/export" FileName="resources" />
   </card>
 </template>
 

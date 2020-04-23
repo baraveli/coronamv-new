@@ -10,7 +10,8 @@ import axios from "axios";
 export default {
   name: "ExportCsv",
   props: {
-    ApiEndpoint: { type: String, default: null }
+    ApiEndpoint: { type: String, default: null },
+    FileName: {type: String, default: "file"}
   },
 
   methods: {
@@ -23,7 +24,7 @@ export default {
         var fileURL = window.URL.createObjectURL(new Blob([response.data]));
         var fileLink = document.createElement("a");
         fileLink.href = fileURL;
-        fileLink.setAttribute("download", "file.csv");
+        fileLink.setAttribute("download", `${this.FileName}.csv`);
         document.body.appendChild(fileLink);
         fileLink.click();
       });
