@@ -24,7 +24,7 @@ class MaldivesDetailAPIController extends AppBaseController
     public function index(Test $tests, Total $totals)
     {
 
-        $data = Cache::remember('maldives.data', 3, function () use ($totals, $tests) {
+        $data = Cache::remember('maldives.data', 600, function () use ($totals, $tests) {
             return $this->tranform(new HPA, $totals, $tests);
         });
 
