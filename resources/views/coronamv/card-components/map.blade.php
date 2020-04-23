@@ -6,21 +6,34 @@
         
         <div class="col-sm-4">
           <div class="rounded-lg o-90" style="background-color:#FFE0E6;">
-              <h1 class="f5 mb2 center text-center"  v-if="confirmed != null"  style="color:#FF6F8C;">Confirmed</h1>
+              <h1 class="text-center divtype"  v-if="confirmed != null"  style="color:#FF6F8C; font-size:15px;">
+                <div class="mt-2">
+                ބަލިޖެހިފައިވާ ޢަދަދު
+                </div>
+              </h1>
               <h1 class="f4 mb2 center text-center font-weight-bold" style="color: #FF093C;"  v-if="confirmed != null"> @{{ confirmed}}</h1>
           </div>
         </div>
 
         <div class="col-sm-4">
           <div class="rounded-lg o-90" style="background-color:#EFF7FF;">
-              <h1 class="f5 mb2 center text-center"  v-if="active != null"  style="color:#62AEFF;">Active</h1>
+              <h1 class="text-center divtype"  v-if="active != null"  style="color:#62AEFF; font-size:15px;">
+                <div class="mt-2">
+                  ފަރުވާ ދެމުންގެންދާ ޢަދަދު
+                  </div>
+              
+              </h1>
               <h1 class="f4 mb2 center text-center font-weight-bold" style="color: #027DFF;"  v-if="active != null"> @{{ active}}</h1>
           </div>
         </div>
 
         <div class="col-sm-4">
           <div class="rounded-lg o-90" style="background-color:#E4F4E8;">
-              <h1 class="f5 mb2 center text-center"  v-if="recovered != null"  style="color:#75C687;">Recovered</h1>
+              <h1 class="text-center divtype"  v-if="recovered != null"  style="color:#75C687; font-size:15px;">
+                <div class="mt-2">
+                  ރަނގަޅުވެފައިވާ ޢަދަދު
+                </div>
+              </h1>
               <h1 class="f4 mb2 center text-center font-weight-bold" style="color: #2AA747;"  v-if="recovered != null"> @{{ recovered}}</h1>
           </div>
         </div>
