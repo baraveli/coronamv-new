@@ -272,9 +272,7 @@
       <p class="o-70">{{ entries }}</p>
     </div>
 
-    <b-button variant="success" size="sm" @click="ExportCsv()" class="mr-1">
-      Export to csv
-    </b-button>
+    <export-csv ApiEndpoint="/api/resources/export" />
   </card>
 </template>
 
@@ -282,6 +280,7 @@
 import Form from "vform";
 import { objectToFormData } from "object-to-formdata";
 import axios from "axios";
+import ExportCsv from "~/components/ExportCsv";
 
 export default {
   data: () => ({
@@ -345,6 +344,10 @@ export default {
       { key: "actions", label: "Actions" }
     ]
   }),
+
+  components: {
+    ExportCsv
+  },
 
   computed: {
     // calculating record states
@@ -452,21 +455,6 @@ export default {
 
       //Flash a message
       this.message = `ResourceID: ${id} has been deleted`;
-    },
-
-    ExportCsv() {
-      axios({
-        url: "/api/resources/export",
-        method: "GET",
-        responseType: "blob"
-      }).then(response => {
-        var fileURL = window.URL.createObjectURL(new Blob([response.data]));
-        var fileLink = document.createElement("a");
-        fileLink.href = fileURL;
-        fileLink.setAttribute("download", "resource.csv");
-        document.body.appendChild(fileLink);
-        fileLink.click();
-      });
     }
   }
 };
