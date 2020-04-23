@@ -20,7 +20,6 @@ class Client
     public function CallApi($endpoint, $cachekey)
     {
         try {
-
             return Cache::remember($cachekey, 3600, function () use ($endpoint, $cachekey) {
                 $client = new GuzzleClient();
                 $response = $client->request('GET', $endpoint);

@@ -1,17 +1,3 @@
-Vue.component("island-card", {
-  props: ["island"],
-  template: `
-    <div class="br2">
-      <div class="pa3 flex-auto bb b--white-10">
-        <h3 class="mt0 mb1 f6 ttu white o-80">{{ island.name }}</h3>
-        <h2 class="mv0 f2 fw5 white">{{ island.confirmed }}</h2>
-      </div>
-    </div>
-  `
-});
-
-
-
 Vue.component("graphline", {
   props: ["title", "value"],
   data: function () {
@@ -114,6 +100,10 @@ Vue.component("graphline", {
 
           scales: {
             xAxes: [{
+              type: 'time',
+                time: {
+                    unit: 'month'
+                },
               display: true
             }],
 
@@ -127,6 +117,24 @@ Vue.component("graphline", {
   }
 
 });
+
+
+
+Vue.component("island-card", {
+  props: ["island"],
+  template: `
+    <div class="br2">
+      <div class="pa3 flex-auto bb b--white-10">
+        <h3 class="mt0 mb1 f6 ttu white o-80">{{ island.name }}</h3>
+        <h2 class="mv0 f2 fw5 white">{{ island.confirmed }}</h2>
+      </div>
+    </div>
+  `
+});
+
+
+
+
 
 
 Vue.component("status-card", {
