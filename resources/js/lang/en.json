@@ -80,6 +80,7 @@
   "lat": "Latitude",
   "long": "Longitude",
   "body": "Body",
-  "resource_tag": "Resource Tag"
+  "resource_tag": "Resource Tag",
+  "resource_link": "Resource Link"
   
 }

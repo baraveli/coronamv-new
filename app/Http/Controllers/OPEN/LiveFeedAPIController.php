@@ -10,9 +10,9 @@ class LiveFeedAPIController extends AppBaseController
 {
     protected $client;
 
-    public function __construct()
+    public function __construct(Client $client)
     {
-        $this->client = new Client;
+        $this->client = $client;
     }
     /**
      * index
@@ -23,7 +23,7 @@ class LiveFeedAPIController extends AppBaseController
      */
     public function index()
     {
-        $response = $this->client->sendRequest("https://feeds.coronamv.live/api/timeline",'elivefeed343');
+        $response = $this->client->CallApi("https://feeds.coronamv.live/api/timeline",'elivefeed343');
 
         return $this->sendResponse($response["data"], ' live feed retrieved successfully');
     }

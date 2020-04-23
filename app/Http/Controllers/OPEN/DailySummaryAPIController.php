@@ -22,7 +22,7 @@ class DailySummaryAPIController extends AppBaseController
      */
     public function index()
     {
-        $response = $this->client->sendRequest("https://covid19.mathdro.id/api/daily", "dailyindex23434");
+        $response = $this->client->CallApi("https://covid19.mathdro.id/api/daily", "dailyindex23434");
 
         return $this->sendResponse($response, 'Daily reports retrieved successfully');
     }

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\OPEN\Client;
 
 use GuzzleHttp\Client as GuzzleClient;
@@ -6,27 +7,26 @@ use Illuminate\Support\Facades\Cache;
 
 use Exception;
 
-class Client implements IClient
+class Client
 {
     /**
-     * sendRequest
+     * CallApi
      *
      *  This function takes care of sending http Get request to api;
      *
      * @param  mixed $endpoint
      * @return void
      */
-    public function sendRequest($endpoint, $cachekey)
+    public function CallApi($endpoint, $cachekey)
     {
         try {
-            if (!Cache::has($cachekey)) {
+
+            return Cache::remember($cachekey, 3600, function () use ($endpoint, $cachekey) {
                 $client = new GuzzleClient();
                 $response = $client->request('GET', $endpoint);
                 $rawdata = $response->getBody();
-                $data = json_decode($rawdata, true);
-                Cache::put($cachekey, $data, 3600); // Cache for 1 hour
-            }
-            return Cache::get($cachekey);
+                return json_decode($rawdata, true);
+            });
         } catch (Exception $e) {
             throw new \Exception('Error communicating API');
         }
