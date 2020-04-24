@@ -62,8 +62,6 @@
 
                                     </div>
 
-                                    <small class="text-muted">@@{{resource.creator}}</small>
-
 
                                 </div>
                             </div>
