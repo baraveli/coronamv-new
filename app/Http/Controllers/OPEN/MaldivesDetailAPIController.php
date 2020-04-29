@@ -51,8 +51,8 @@ class MaldivesDetailAPIController extends AppBaseController
             'cases' => Maldives::all(),
             'risks' => Risk::orderBy('created_at', 'desc')->get(),
             'totals' => $totals->GetLatestTotal(),
-            'total_isolation' => $local["Isolation Facilities"],
-            'total_quarantine' => $local["Quarantine Facilities"],
+            'total_isolation' => $local["Isolation"],
+            'total_quarantine' => $local["Quarantine"],
             'tests' =>  $tests->GetLatestTest(),
             'travel_bans' => $this->BuildTravelBans($hpa->GetTravelBans())
 
