@@ -19,8 +19,8 @@
         :value="maldivestotal.total_confirmed">
       </status-card>
 
-      <status-card v-if="maldives.cases" class="card-settings" text="ފެނިފައިވާ ރައްތަކުގެ ޢަދަދު"
-        colour="t-blue" :value="maldives.cases.length">
+      <status-card v-if="maldives.cases" class="card-settings" text="މަރުގެ ޢަދަދު"
+        colour="t-red" :value="maldivestotal.total_death">
       </status-card>
       <status-card class="card-settings" text="ފަރުވާ ދެމުންގެންދާ ޢަދަދު" colour="t-yellow"
         :value="maldivestotal.total_active">
