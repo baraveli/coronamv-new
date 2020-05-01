@@ -1,7 +1,6 @@
 <?php
 namespace App\Modules;
 
-use App\Modules\Scrapers\Mihaaru;
 use App\Modules\Scrapers\Avas;
 use App\Modules\Scrapers\Sun;
 use Illuminate\Support\Facades\Cache;
@@ -18,7 +17,6 @@ class ScraperModule
     public function dispatch()
     {
         if (!Cache::has('mvfeeds54')) {
-            //$mihaaru = new Mihaaru();
             $avas = new Avas();
             $sun = new Sun();
 

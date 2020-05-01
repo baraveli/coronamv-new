@@ -51,8 +51,8 @@ class MaldivesDetailAPIController extends AppBaseController
             'cases' => Maldives::all(),
             'risks' => Risk::orderBy('created_at', 'desc')->get(),
             'totals' => $this->GetLatestTotal($local),
-            'total_isolation' => $local["Isolation"],
-            'total_quarantine' => $local["Quarantine"],
+            'total_isolation' => $local["IF"],
+            'total_quarantine' => $local["QF"],
             'tests' => $this->GetLatestTest($local),
             'travel_bans' => $this->BuildTravelBans($hpa->GetTravelBans())
 
@@ -62,21 +62,21 @@ class MaldivesDetailAPIController extends AppBaseController
     public function GetLatestTotal($data)
     {
         return [
-            'total_confirmed' => $data["Confirmed"],
-            'total_recovered' => $data["Recoveries"],
-            'total_active' => $data["Active Cases"],
-            'total_death' => $data["Deaths"],
-            'local_confirmed' => $data["Locals"]
+            'total_confirmed' => $data["CC"],
+            'total_recovered' => $data["RC"],
+            'total_active' => $data["ACM"],
+            'total_death' => $data["DD"],
+            'local_confirmed' => $data["L"]
         ];
     }
 
     public function GetLatestTest($data)
     {
         return [
-            'total_tested' => $data["Samples Collected"],
-            'total_positive' => $data["Samples Positive"],
-            'total_negative' => $data["Samples Negative"],
-            'total_pending' => $data["Samples Pending"]
+            'total_tested' => $data["SC"],
+            'total_positive' => $data["CC"],
+            'total_negative' => $data["SNG"],
+            'total_pending' => $data["SPN"]
         ];
     }
 
