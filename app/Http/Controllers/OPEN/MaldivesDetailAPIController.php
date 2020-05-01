@@ -21,11 +21,11 @@ class MaldivesDetailAPIController extends AppBaseController
      * 
      *
      */
-    public function index(Test $tests, Total $totals)
+    public function index()
     {
 
-        $data = Cache::remember('maldives.data', 600, function () use ($totals, $tests) {
-            return $this->tranform(new HPA, $totals, $tests);
+        $data = Cache::remember('maldives.data', 600, function (){
+            return $this->tranform(new HPA);
         });
 
 
@@ -42,7 +42,7 @@ class MaldivesDetailAPIController extends AppBaseController
      * @param  mixed $tests
      * @return void
      */
-    protected function tranform(HPA $hpa, $totals, $tests)
+    protected function tranform(HPA $hpa)
     {
         $local = $hpa->GetLocalTotal();
 
@@ -50,12 +50,33 @@ class MaldivesDetailAPIController extends AppBaseController
             'Location' => 'Maldives',
             'cases' => Maldives::all(),
             'risks' => Risk::orderBy('created_at', 'desc')->get(),
-            'totals' => $totals->GetLatestTotal(),
+            'totals' => $this->GetLatestTotal($local),
             'total_isolation' => $local["Isolation"],
             'total_quarantine' => $local["Quarantine"],
-            'tests' =>  $tests->GetLatestTest(),
+            'tests' => $this->GetLatestTest($local),
             'travel_bans' => $this->BuildTravelBans($hpa->GetTravelBans())
 
+        ];
+    }
+
+    public function GetLatestTotal($data)
+    {
+        return [
+            'total_confirmed' => $data["Confirmed"],
+            'total_recovered' => $data["Recoveries"],
+            'total_active' => $data["Active Cases"],
+            'total_death' => $data["Deaths"],
+            'local_confirmed' => $data["Locals"]
+        ];
+    }
+
+    public function GetLatestTest($data)
+    {
+        return [
+            'total_tested' => $data["Samples Collected"],
+            'total_positive' => $data["Samples Positive"],
+            'total_negative' => $data["Samples Negative"],
+            'total_pending' => $data["Samples Pending"]
         ];
     }
 

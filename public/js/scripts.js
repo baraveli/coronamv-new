@@ -278,7 +278,7 @@ new Vue({
             //console.log(this.atoll_totals)
             let confirmed = this.getCases(atoll) //gets the cases for the atoll
             if (confirmed > 0) {
-              el.setAttribute('fill', this.pSBC(0.19 * Math.log(confirmed), this.default_fill, this.positive_fill, true)) //
+              el.setAttribute('fill', this.pSBC(0.19 * Math.log(confirmed/4), this.default_fill, this.positive_fill, true)) //
             }
           })
         });
