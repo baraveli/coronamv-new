@@ -170,7 +170,7 @@ new Vue({
     keyword: '',
     dataArray: [],
     fields: [{
-        key: 'total_death',
+        key: 'TotalDeaths',
         label: 'މަރުގެ އަދަދު',
         sortable: true,
         formatter: value => {
@@ -178,7 +178,7 @@ new Vue({
         }
       },
       {
-        key: 'total_recovered',
+        key: 'TotalRecovered',
         label: 'ރަނގަޅުވެފައިވާ ޢަދަދު',
         sortable: true,
         formatter: value => {
@@ -186,7 +186,7 @@ new Vue({
         }
       },
       {
-        key: 'total_cases',
+        key: 'TotalConfirmed',
         label: 'ފެނިފައިވާ އަދަދު',
         sortable: true,
         formatter: value => {
@@ -194,7 +194,7 @@ new Vue({
         }
       },
       {
-        key: 'country_name',
+        key: 'Country',
         label: 'ޤައުމު',
         sortable: true,
         formatter: value => {
@@ -245,7 +245,7 @@ new Vue({
           return response.json()
         })
         .then((parsedJson) => {
-          this.infectionData = parsedJson["data"]
+          this.infectionData = parsedJson["data"]["totals"]
         })
     },
 
@@ -418,7 +418,7 @@ new Vue({
 
     items: function () {
       return this.keyword ?
-        this.dataArray.filter(item => item.country_name.toLowerCase().trim().includes(this.keyword.toLowerCase())) :
+        this.dataArray.filter(item => item.Country.toLowerCase().trim().includes(this.keyword.toLowerCase())) :
         this.dataArray
     },
     rows: function () {
