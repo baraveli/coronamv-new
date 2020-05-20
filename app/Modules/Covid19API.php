@@ -11,7 +11,7 @@ class Covid19API
 
     public function GetTotal() : array
     {
-        $data = Cache::remember('covid19.totals', 1800, function () {
+        $data = Cache::remember('covid19.totals', 3600, function () {
              $response = Http::get('https://api.covid19api.com/summary')->json();
             
              $totalData = [
@@ -27,7 +27,7 @@ class Covid19API
 
     public function GetTotalCountry() : array
     {
-        $data = Cache::remember('covid19.country.total', 1800, function () {
+        $data = Cache::remember('covid19.country.total', 3600, function () {
             $response = Http::get('https://api.covid19api.com/summary')->json();
             return $response["Countries"];
        });
