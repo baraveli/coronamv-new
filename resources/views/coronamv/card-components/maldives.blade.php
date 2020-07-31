@@ -20,7 +20,7 @@
       </status-card>
 
       <status-card v-if="maldives.cases" class="card-settings" text="މަރުގެ ޢަދަދު"
-        colour="t-red" :value="maldivestotal.total_death">
+        colour="t-red" :value="maldivestotal.total_deaths">
       </status-card>
       <status-card class="card-settings" text="ފަރުވާ ދެމުންގެންދާ ޢަދަދު" colour="t-yellow"
         :value="maldivestotal.total_active">
