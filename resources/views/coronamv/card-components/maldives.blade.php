@@ -43,16 +43,16 @@
     <p class="text-center" style="font-size: 11px;">Data Source: <a href="https://twitter.com/HPA_MV"
         style="color: #2F80FF;">@HPA</a></p>
     <div class="flex flex-wrap nl3 nr3">
-      <status-card class="card-settings" text="ޕޮސިޓިވް" colour="t-orange" :value="tests.total_positive">
+      <status-card class="card-settings" text="ޕޮސިޓިވް" colour="t-orange" :value="maldivestotal.total_confirmed">
       </status-card>
 
-      <status-card class="card-settings" text="ޖުމްލަ" colour="t-black" :value="tests.total_tested">
+      <status-card class="card-settings" text="ޖުމްލަ" colour="t-black" :value="maldivestotal.samples_tested">
       </status-card>
 
-      <status-card class="card-settings" text="ޕެންޑިން" colour="t-flesh" :value="tests.total_pending">
+      <status-card class="card-settings" text="ޕެންޑިން" colour="t-flesh" :value="maldivestotal.samples_pending">
       </status-card>
 
-      <status-card class="card-settings" text="ނެގެޓިވް" colour="t-red" :value="tests.total_negative">
+      <status-card class="card-settings" text="ނެގެޓިވް" colour="t-red" :value="maldivestotal.samples_negative">
       </status-card>
     </div>
     <!-- Maldives stats end-->

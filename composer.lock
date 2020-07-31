@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "656c965162de9ee0f53aebf41bc4fc96",
+    "content-hash": "9371de01cf88cba48e05e769eb914cee",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -882,16 +882,16 @@
         },
         {
             "name": "jinas/covid-19-observer",
-            "version": "v1.5",
+            "version": "v1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jinas123/covid-19-observer.git",
-                "reference": "0166fe4e0c25804baa699b7397e81b1375595408"
+                "reference": "07f031e5d74137801dbcb252c4ed6d7af0d2af7a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jinas123/covid-19-observer/zipball/0166fe4e0c25804baa699b7397e81b1375595408",
-                "reference": "0166fe4e0c25804baa699b7397e81b1375595408",
+                "url": "https://api.github.com/repos/jinas123/covid-19-observer/zipball/07f031e5d74137801dbcb252c4ed6d7af0d2af7a",
+                "reference": "07f031e5d74137801dbcb252c4ed6d7af0d2af7a",
                 "shasum": ""
             },
             "require": {
@@ -921,7 +921,7 @@
                 }
             ],
             "description": "PHP Toolkit to get data about covid19",
-            "time": "2020-05-01T21:42:10+00:00"
+            "time": "2020-07-31T21:56:38+00:00"
         },
         {
             "name": "laracasts/flash",
