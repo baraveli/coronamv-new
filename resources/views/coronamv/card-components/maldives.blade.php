@@ -27,11 +27,11 @@
       </status-card>
 
       <status-card class="card-settings" text="އައިސޮލޭޝަން ފެސިލިޓީތަކުގައި" colour="t-flesh"
-        :value="maldives.total_isolation">
+        :value="maldivestotal.isolation">
       </status-card>
 
       <status-card class="card-settings" text="ކަރަންޓީން ފެސިލިޓީތަކުގައި" colour="t-purple"
-        :value="maldives.total_quarantine">
+        :value="maldivestotal.quarantine">
       </status-card>
 
     </div>

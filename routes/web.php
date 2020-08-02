@@ -21,3 +21,7 @@ Route::get('/', function () {
 Route::get('/resources', function() {
     return view('coronamv.resources.index');
 });
+
+Route::get('/render/global', function(){
+
+});
