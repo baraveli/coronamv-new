@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Jinas\Covid19\Render;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Cache;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,11 +27,13 @@ Route::get('/resources', function () {
 
 Route::get('/render/global', function () {
 
-    $response = Response::make(Render::RenderGlobal());
+    return Cache::remember('global.image', 900, function () {
+        $response = Response::make(Render::RenderGlobal());
 
-    // set content-type
-    $response->header('Content-Type', 'image/png');
+        // set content-type
+        $response->header('Content-Type', 'image/png');
 
-    // output
-    return $response;
+        // output
+        return $response;
+    });
 });
