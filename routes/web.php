@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Jinas\Covid19\Render;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,5 +24,5 @@ Route::get('/resources', function() {
 });
 
 Route::get('/render/global', function(){
-
+    return Render::RenderGlobal();
 });
