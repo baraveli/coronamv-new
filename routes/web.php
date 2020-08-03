@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Jinas\Covid19\Render;
+use Illuminate\Support\Facades\Response;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,10 +20,17 @@ Route::get('/', function () {
 });
 
 
-Route::get('/resources', function() {
+Route::get('/resources', function () {
     return view('coronamv.resources.index');
 });
 
-Route::get('/render/global', function(){
-    return Render::RenderGlobal();
+Route::get('/render/global', function () {
+
+    $response = Response::make(Render::RenderGlobal());
+
+    // set content-type
+    $response->header('Content-Type', 'image/png');
+
+    // output
+    return $response;
 });
