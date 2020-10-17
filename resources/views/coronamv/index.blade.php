@@ -17,6 +17,10 @@
             <h3 class="fw4 ttu mv0 dib ph3 o-90" style="font-family:Mvaamu; color: #3A3A56; font-size: 25px;">ދިވެހި
               ރާއްޖެ<span style="margin-left:5px;"><img src="icons/maldives.svg" class="icon-size"></span></h3>
             <hr class="o-20" />
+            
+              <b-alert show variant="danger">
+    <h6 class="text-center" style="color:white;">Note: We don't maintain this anymore. Because of the government issued <a href="https://covid19.health.gov.mv/dashboard/">dashboard</a></h6>
+  </b-alert>
            
 
           </div>
@@ -33,8 +37,6 @@
           </div>
 
           @include('coronamv.card-components.level')
-
-          @include('coronamv.alert-message.notice')
 
           @include('coronamv.card-components.maldives')
 
