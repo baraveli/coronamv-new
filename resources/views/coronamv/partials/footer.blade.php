@@ -3,7 +3,7 @@
       <div class="col-lg-12">
 
         <p class="footer-text text-center">Coronamv © 2020. Made with ❤️ in Maldives. By <span><a
-              href="https://github.com/jinas123" class="footer-a-tags">@jinas123</a>, <a
+              href="https://github.com/boring-dragon" class="footer-a-tags">@boring_dragon</a>, <a
               href="https://github.com/Dharisd" class="footer-a-tags">@dharisd</a>,
             <a href="https://www.facebook.com/Musthokulafihi/" class="footer-a-tags">@kulafihi</a>,
             <a href="https://shihaam.me/" class="footer-a-tags">@shihaam.me</a></span></p>
